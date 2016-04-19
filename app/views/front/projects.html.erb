@@ -1,0 +1,10 @@
+<aside class='crumbs'>
+    <%= link_to "Home", root_path, class: "crumb-link"%>
+    <%= link_to "Projects", front_projects_path, class: "crumb-link"%>
+    <%= link_to "Mineraliety", front_project_path(@project), class: "crumb-link"%>
+</aside>
+
+<section class='front-projects-container'>
+  <%= render :partial => 'projects', locals: {projects: @projects} %>  
+</section>
+

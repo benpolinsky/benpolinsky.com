@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   resources :links
   resources :projects
+  get 'front/home' => 'front#home', as: :home
+  get 'front/projects' => 'front#projects', as: :front_projects
+  get 'front/project/:id' => 'front#project', as: :front_project
+  get 'front/contact' => 'front#contact', as: :contact
+  root to: 'front#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

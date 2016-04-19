@@ -1,0 +1,19 @@
+<article>
+  <p>
+    I love developing and desiging projects for the web.  
+    I’ve spent the last  six years making sites and learning new technologies.  
+    I take a modern, modular approach to code, and am thrilled with the current direction of the industry.
+  </p>  
+  
+  <p>
+    Check out some of my recent projects and 
+    <%= link_to "drop me a line if you're intereted in working together.", 'mailto:benjamin.polinsky@gmail.com' %>
+  </p>
+</article>
+
+<section class='recent-projects'>
+  <%= render :partial => 'projects', locals: {projects: @projects} %>
+
+  
+  <%= link_to "View All", front_projects_path, class: "projects-view-all" %>
+</section>
