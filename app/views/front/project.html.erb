@@ -1,7 +1,7 @@
 <aside class='crumbs'>
     <%= link_to "Home", root_path, class: "crumb-link"%>
     <%= link_to "Projects", front_projects_path, class: "crumb-link"%>
-    <%= link_to "Mineraliety", front_project_path(@project), class: "crumb-link"%>
+    <%= link_to @project.name.capitalize, front_project_path(@project), class: "crumb-link"%>
 </aside>
 
 <section class='project'>

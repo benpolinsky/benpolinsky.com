@@ -24,9 +24,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'carrierwave'
+gem "fog"
+
 gem 'friendly_id', '~> 5.1.0'
 gem 'figaro'
-
+gem 'rmagick'
 gem 'devise'
 
 
