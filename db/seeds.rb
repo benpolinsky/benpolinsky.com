@@ -34,3 +34,10 @@ Link.create({
   subtitle: "Check out my code on Bitbucket",
   image: "http://placehold.it/50x50"
   })
+  
+# example admin
+
+Admin.create({
+  email: "benjamin.polinsky@gmail.com",
+  password: "password"
+})

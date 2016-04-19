@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   resources :links
   resources :projects
   get 'front/home' => 'front#home', as: :home
