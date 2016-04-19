@@ -17,7 +17,7 @@ class FrontController < ApplicationController
   end
   
   def project
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
   end
   
   protected
