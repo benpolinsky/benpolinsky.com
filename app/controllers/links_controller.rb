@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_admin!
   before_action :set_link, only: [:show, :edit, :update, :destroy]
 
   # GET /links

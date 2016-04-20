@@ -7,9 +7,12 @@
   <%= csrf_meta_tags %>
   <script src="https://use.typekit.net/ttp0tmc.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="icon" 
+        type="image/png" 
+        href="favicon.png">
 </head>
-<body>
-  <header>
+<body class="<%= body_class %> ">
+  <header class='front'>
         
     <div class='errors-and-notices'>
       <p class="notice"><%= notice %></p>
@@ -21,8 +24,8 @@
     
     <div class='sub-title'>
       <div>Ruby on Rails</div>
+      <div>Javascript</div>
       <div>Wordpress</div>
-      <div>Javascript Frameworks</div>
       <div>Adobe Creative Suite</div>
     </div>
   </header>
@@ -34,7 +37,10 @@
   <footer>
     <div class='links-container'>
       <% @links.each do |link| %>
-        <%= link_to link.name, link.url, class: "footer-link" %>
+        <div class='footer-link'>
+          <%= image_tag link.image.url %>
+          <%= content_tag :p, link.subtitle, class: "footer-link-subtitle" %>
+        </div>
       <% end %>
     </div>    
   </footer>  

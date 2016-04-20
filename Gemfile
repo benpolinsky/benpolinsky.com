@@ -23,6 +23,16 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap_form'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
+gem 'active_link_to'
+gem "flutie"
+
 gem 'carrierwave'
 gem "fog"
 

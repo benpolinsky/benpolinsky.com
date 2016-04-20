@@ -1,0 +1,36 @@
+.main-container{
+  width:500px;
+  margin:0 auto;
+  text-align:center;
+  overflow:hidden;
+}
+
+.recent-projects{
+  clear:both;
+  overflow:hidden;
+  margin-top:20px;
+}
+
+.project-link{
+  float:left;
+  margin:5px;
+  height:150px;
+  width:100px;
+  position:relative;
+}
+
+.project-link img{
+  width:100px;
+}
+
+.project-link-name{
+  position:absolute;
+  bottom:0;
+  text-align:center;
+  width:100%;
+}
+
+a.projects-view-all{
+  float:right;
+  clear:both;
+}

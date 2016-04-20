@@ -1,0 +1,32 @@
+header.front{
+  max-width:1200px;
+  margin:0 auto;
+  border-bottom:1px solid black;
+  padding-bottom:20px;
+}
+
+header h1.site-title{
+  text-align:center;
+}
+
+header a.email-me{
+  text-align:center;
+  margin:0 auto;
+  display:block;
+  font-size:10px;
+  font-weight:700;
+}
+
+header .sub-title {
+  text-align:center;
+  margin-top:15px;
+}
+
+header .sub-title div{
+  display:inline;
+  margin:0 5px;
+  color:#B5B5B5;;
+  text-align:center;
+  text-transform:lowercase;
+  font-size:12px;
+}

@@ -1,4 +1,25 @@
-*{
-  font-family: "acumin-pro";
-  font-weight:200;
+$lightblue: #29ABE2;
+
+body.front{
+  *{
+    font-family: "acumin-pro";
+    font-weight:200;
+  }
+
+  h1{
+    font-size:16px;
+    text-transform:lowercase;
+    margin:0 auto;
+  }
+
+  p{
+    font-size:12px;
+  }
+
+  a, a:focus, a:active, a:visited{
+    color:$lightblue;
+    font-size:10px;
+  }  
 }
+
+

@@ -1,8 +1,9 @@
-<p id="notice"><%= notice %></p>
+<div class='col-xs-12'>
+  <p id="notice"><%= notice %></p>
 
 <h1>Listing Links</h1>
 
-<table>
+<table class='table'>
   <thead>
     <tr>
       <th>Name</th>
@@ -18,11 +19,15 @@
       <tr>
         <td><%= link.name %></td>
         <td><%= link.url %></td>
-        <td><%= link.image %></td>
+        <td><%= image_tag link.image.url(:thumb) %></td>
         <td><%= link.subtitle %></td>
-        <td><%= link_to 'Show', link %></td>
-        <td><%= link_to 'Edit', edit_link_path(link) %></td>
-        <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <div class='btn-group'>
+            <%= link_to 'Show', link, class: "btn btn-default" %>
+            <%= link_to 'Edit', edit_link_path(link), class: "btn btn-default" %>
+            <%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          </div>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +35,5 @@
 
 <br>
 
-<%= link_to 'New Link', new_link_path %>
+<%= link_to 'New Link', new_link_path, class: "btn btn-primary" %>
+</div>
