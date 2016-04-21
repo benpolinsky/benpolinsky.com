@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
   devise_for :admins
-  resources :links
-  resources :projects
+  
+  resources :links do
+    collection do
+      post 'update_row_order'
+    end
+  end
+  
+  resources :projects do
+    collection do
+      post 'update_row_order'
+    end
+  end
   
   get 'front/home' => 'front#home', as: :home
   get 'front/projects' => 'front#projects', as: :front_projects

@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.by_row_order
   end
 
   # GET /projects/1
@@ -60,6 +60,13 @@ class ProjectsController < ApplicationController
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def update_row_order
+    @project = Project.find(params[:item][:item_id])
+    @project.row_order_position = params[:item][:row_order_position]
+    @project.save
+    head :created
   end
 
   private

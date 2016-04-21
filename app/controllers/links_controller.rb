@@ -62,6 +62,13 @@ class LinksController < ApplicationController
     end
   end
 
+  def update_row_order
+    @link = Link.find(params[:item][:item_id])
+    @link.row_order_position = params[:item][:row_order_position]
+    @link.save
+    head :created
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_link

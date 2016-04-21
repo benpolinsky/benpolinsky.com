@@ -1,4 +1,7 @@
 class Link < ActiveRecord::Base
+  include RankedModel
+  ranks :row_order
+
   extend FriendlyId
   friendly_id :name, use: :slugged
   
@@ -7,4 +10,8 @@ class Link < ActiveRecord::Base
   validates :subtitle, presence: true
   
   mount_uploader :image, ImageUploader
+  
+  def self.by_row_order
+    order(row_order: :asc)
+  end
 end

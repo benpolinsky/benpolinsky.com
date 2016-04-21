@@ -3,7 +3,7 @@
 
 <h1>Listing Links</h1>
 
-<table class='table'>
+<table class='table sortable'>
   <thead>
     <tr>
       <th>Name</th>
@@ -16,7 +16,7 @@
 
   <tbody>
     <% @links.each do |link| %>
-      <tr>
+    <%= content_tag :tr, class: "item", data: {item_id: link.id, post_path: url_for([:update_row_order, :projects])} do %>
         <td><%= link.name %></td>
         <td><%= link.url %></td>
         <td><%= image_tag link.image.url(:thumb) %></td>
@@ -28,7 +28,7 @@
             <%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
           </div>
         </td>
-      </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

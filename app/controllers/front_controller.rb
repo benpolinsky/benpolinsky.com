@@ -2,7 +2,7 @@ class FrontController < ApplicationController
   before_filter :grab_links
   layout 'home'
   def home
-    @projects = Project.all.limit(4)
+    @projects = Project.by_row_order.limit(4)
   end
   
   def contact
@@ -17,7 +17,7 @@ class FrontController < ApplicationController
   end
   
   def projects
-    @projects = Project.all
+    @projects = Project.by_row_order
   end
   
   def project
@@ -27,6 +27,6 @@ class FrontController < ApplicationController
   protected
   
   def grab_links
-    @links = Link.all
+    @links = Link.by_row_order
   end
 end
