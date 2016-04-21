@@ -47,3 +47,28 @@ a.projects-view-all{
   float:right;
   clear:both;
 }
+
+
+@media screen and (max-width: 680px) {
+  .main-container{
+    width:100%;
+    margin:0;
+    text-align:center;
+    overflow:hidden;
+  }
+  .front-projects-container{
+    clear:both;
+  }
+  .recent-projects{
+    clear:both;
+    overflow:hidden;
+    margin-top:20px;
+
+  }
+
+  a.projects-view-all{
+    float:left;
+    clear:both;
+  }
+
+}
