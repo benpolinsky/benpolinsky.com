@@ -1,6 +1,5 @@
 $lightblue: #29ABE2;
 
-body.front{
   *{
     font-family: "acumin-pro";
     font-weight:200;
@@ -20,6 +19,9 @@ body.front{
     color:$lightblue;
     font-size:10px;
   }  
+
+
+
+.parsley-errors-list{
+   padding:10px 0; 
 }
-
-

@@ -34,7 +34,15 @@ Rails.application.configure do
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
-
+  
+  ActionMailer::Base.smtp_settings = {
+    :port           => 587,
+    :address        => 'smtp.mailgun.org',
+    :user_name      => 'postmaster@your.mailgun.domain',
+    :password       => 'mailgun-smtp-password',
+    :domain         => 'your.mailgun.domain',
+    :authentication => :plain,
+  }
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.

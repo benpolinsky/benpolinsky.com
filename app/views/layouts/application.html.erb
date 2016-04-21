@@ -7,9 +7,7 @@
   <%= csrf_meta_tags %>
   <script src="https://use.typekit.net/ttp0tmc.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <link rel="icon" 
-        type="image/png" 
-        href="favicon.png">
+  <%= favicon_link_tag 'favicon.png' %>
 </head>
 <body class="<%= body_class %>">
 <% unless flash.empty? %>

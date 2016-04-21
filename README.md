@@ -1,5 +1,9 @@
-- aws bucket
-- s3_direct? / carrierwave
-- Front Styles
+- Front Styles - near finished
+- Call to action - contact at top or top right or something
 
-- interested in working together - modal whole screen overlay with nice form and contact options
+- contact form
+  - animate thanks msg
+  
+- Rearrange / drag drop of projects + links (backend)
+- rearrange routes etc
+- Add Gems / Plugins Section once you hook that up

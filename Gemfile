@@ -32,6 +32,7 @@ end
 
 gem 'active_link_to'
 gem "flutie"
+gem 'parsley-rails'
 
 gem 'carrierwave'
 gem "fog"

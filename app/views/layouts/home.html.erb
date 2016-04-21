@@ -2,14 +2,12 @@
 <html>
 <head>
   <title>Benpolinskyweb</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', 'parsley', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <script src="https://use.typekit.net/ttp0tmc.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <link rel="icon" 
-        type="image/png" 
-        href="favicon.png">
+  <%= favicon_link_tag 'favicon.png' %>
 </head>
 <body class="<%= body_class %> ">
   <header class='front'>
@@ -34,12 +32,19 @@
     <%= yield %>  
   </div>
   
+  <!--Call your modal-->
+
+     <%= render :partial => 'shared/quick_modal' %>
+
+  
   <footer>
     <div class='links-container'>
       <% @links.each do |link| %>
         <div class='footer-link'>
-          <%= image_tag link.image.url %>
-          <%= content_tag :p, link.subtitle, class: "footer-link-subtitle" %>
+          <%= link_to link.url do %>
+            <%= image_tag link.image.url %>
+            <%= content_tag :p, link.subtitle, class: "footer-link-subtitle" %>
+          <% end %>
         </div>
       <% end %>
     </div>    
