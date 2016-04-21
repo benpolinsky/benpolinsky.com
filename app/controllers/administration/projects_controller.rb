@@ -1,4 +1,4 @@
-class ProjectsController < ApplicationController
+class Administration::ProjectsController < ApplicationController
   before_action :authenticate_admin!
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
@@ -29,8 +29,8 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
-        format.json { render :show, status: :created, location: @project }
+        format.html { redirect_to [:administration, @project], notice: 'Project was successfully created.' }
+        format.json { render :show, status: :created, location: [:administration, @project] }
       else
         format.html { render :new }
         format.json { render json: @project.errors, status: :unprocessable_entity }
@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
+        format.html { redirect_to [:administration, @project], notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
+      format.html { redirect_to administration_projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

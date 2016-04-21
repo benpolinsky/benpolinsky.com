@@ -16,16 +16,16 @@
 
   <tbody>
     <% @links.each do |link| %>
-    <%= content_tag :tr, class: "item", data: {item_id: link.id, post_path: url_for([:update_row_order, :projects])} do %>
+    <%= content_tag :tr, class: "item", data: {item_id: link.id, post_path: url_for([:update_row_order, :administration, :projects])} do %>
         <td><%= link.name %></td>
         <td><%= link.url %></td>
         <td><%= image_tag link.image.url(:thumb) %></td>
         <td><%= link.subtitle %></td>
         <td>
           <div class='btn-group'>
-            <%= link_to 'Show', link, class: "btn btn-default" %>
-            <%= link_to 'Edit', edit_link_path(link), class: "btn btn-default" %>
-            <%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            <%= link_to 'Show', [:administration, link], class: "btn btn-default" %>
+            <%= link_to 'Edit', edit_administration_link_path(link), class: "btn btn-default" %>
+            <%= link_to 'Destroy', [:administration, link], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
           </div>
         </td>
       <% end %>
@@ -35,5 +35,5 @@
 
 <br>
 
-<%= link_to 'New Link', new_link_path, class: "btn btn-primary" %>
+<%= link_to 'New Link', new_administration_link_path, class: "btn btn-primary" %>
 </div>

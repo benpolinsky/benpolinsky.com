@@ -22,8 +22,8 @@
   <nav class='navbar bg-inverse navbar-dark main'>
     <div class='nav navbar-nav'>
      
-      <%= active_link_to "Links", links_path, class: "nav-item nav-link" %>
-      <%= active_link_to "Projects", projects_path, class: "nav-item nav-link" %>
+      <%= active_link_to "Links", administration_links_path, class: "nav-item nav-link" %>
+      <%= active_link_to "Projects", administration_projects_path, class: "nav-item nav-link" %>
       <%= active_link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "nav-item nav-link" %>
 
     </div> 

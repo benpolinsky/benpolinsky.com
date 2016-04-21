@@ -18,14 +18,15 @@ Rails.application.configure do
 
   ActionMailer::Base.delivery_method = :smtp
 
-  ActionMailer::Base.smtp_settings = {
-    :port           => 587,
-    :address        => 'smtp.mailgun.org',
-    :user_name      => ENV["mailgun_username"],
-    :password       => ENV["mailgun_password"],
-    :domain         => ENV["mailgun_domain"],
-    :authentication => :plain,
-  }
+  # Mailgun
+  # ActionMailer::Base.smtp_settings = {
+  #   :port           => 587,
+  #   :address        => 'smtp.mailgun.org',
+  #   :user_name      => ENV["mailgun_username"],
+  #   :password       => ENV["mailgun_password"],
+  #   :domain         => ENV["mailgun_domain"],
+  #   :authentication => :plain,
+  # }
 
   config.action_mailer.asset_host = "localhost:3000"
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }

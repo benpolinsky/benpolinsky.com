@@ -1,21 +1,22 @@
 Rails.application.routes.draw do
   devise_for :admins
+  namespace :administration do
+    resources :links do
+      collection do
+        post 'update_row_order'
+      end
+    end
   
-  resources :links do
-    collection do
-      post 'update_row_order'
+    resources :projects do
+      collection do
+        post 'update_row_order'
+      end
     end
   end
   
-  resources :projects do
-    collection do
-      post 'update_row_order'
-    end
-  end
-  
-  get 'front/home' => 'front#home', as: :home
-  get 'front/projects' => 'front#projects', as: :front_projects
-  get 'front/project/:id' => 'front#project', as: :front_project
+  get 'home' => 'front#home', as: :home
+  get 'projects' => 'front#projects', as: :front_projects
+  get 'project/:id' => 'front#project', as: :front_project
   post 'contact' => 'front#contact', as: :contact
   root to: 'front#home'
   # The priority is based upon order of creation: first created -> highest priority.

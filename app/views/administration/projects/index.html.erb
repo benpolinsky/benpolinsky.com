@@ -18,7 +18,7 @@
 
   <tbody>
     <% @projects.each do |project| %>
-    <%= content_tag :tr, class: "item", data: {item_id: project.id, post_path: url_for([:update_row_order, :projects])} do %>
+    <%= content_tag :tr, class: "item", data: {item_id: project.id, post_path: url_for([:update_row_order, :administration, :projects])} do %>
         <td><%= project.name %></td>
         <td><%= project.client %></td>
         <td><%= project.site_url %></td>
@@ -26,9 +26,9 @@
         <td><%= project.creation_date %></td>
         <td>
           <div class='btn-group'>
-            <%= link_to 'Show', project, class: "btn btn-default" %>
-            <%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %>
-            <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            <%= link_to 'Show', [:administration, project], class: "btn btn-default" %>
+            <%= link_to 'Edit', edit_administration_project_path(project), class: "btn btn-default" %>
+            <%= link_to 'Destroy', [:administration, project], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
           </div>
         </td>
         <% end %>
@@ -38,5 +38,5 @@
 
 <br>
 
-<%= link_to 'New Project', new_project_path, class: "btn btn-primary" %>
+<%= link_to 'New Project', new_administration_project_path, class: "btn btn-primary" %>
 </div>

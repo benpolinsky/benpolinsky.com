@@ -38,9 +38,9 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
     :port           => 587,
     :address        => 'smtp.mailgun.org',
-    :user_name      => 'postmaster@your.mailgun.domain',
-    :password       => 'mailgun-smtp-password',
-    :domain         => 'your.mailgun.domain',
+    :user_name      => ENV["mailgun_username"],
+    :password       => ENV["mailgun_password"],
+    :domain         => ENV["mailgun_domain"],
     :authentication => :plain,
   }
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb

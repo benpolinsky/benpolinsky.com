@@ -1,4 +1,4 @@
-class LinksController < ApplicationController
+class Administration::LinksController < ApplicationController
   before_action :authenticate_admin!
   before_action :set_link, only: [:show, :edit, :update, :destroy]
 
@@ -29,8 +29,8 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to @link, notice: 'Link was successfully created.' }
-        format.json { render :show, status: :created, location: @link }
+        format.html { redirect_to [:administration, @link], notice: 'Link was successfully created.' }
+        format.json { render :show, status: :created, location: [:administration, @link] }
       else
         format.html { render :new }
         format.json { render json: @link.errors, status: :unprocessable_entity }
@@ -43,7 +43,7 @@ class LinksController < ApplicationController
   def update
     respond_to do |format|
       if @link.update(link_params)
-        format.html { redirect_to @link, notice: 'Link was successfully updated.' }
+        format.html { redirect_to [:administration, @link], notice: 'Link was successfully updated.' }
         format.json { render :show, status: :ok, location: @link }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class LinksController < ApplicationController
   def destroy
     @link.destroy
     respond_to do |format|
-      format.html { redirect_to links_url, notice: 'Link was successfully destroyed.' }
+      format.html { redirect_to administration_links_url, notice: 'Link was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
