@@ -1,0 +1,20 @@
+aside.crumbs{
+  float:none;
+  clear:both;
+  overflow:hidden;
+  text-align:center;
+  width:auto;
+}
+
+.crumb-link{
+  display:inline;
+  text-align:center;
+}
+
+.crumb-separator{
+  display:inline;
+  margin:0 3px;
+  text-decoration:none;
+  color:$lightblue;
+  font-size:10px;
+}

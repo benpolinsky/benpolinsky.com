@@ -11,11 +11,13 @@
 </head>
 <body class="<%= body_class %> ">
   <header class='front'>
-        
-    <div class='errors-and-notices'>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+<% unless flash.empty? %>
+  <div class='main-errors'>
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "flash #{key}" %>
+    <% end %>
+  </div>
+<% end %>
     
     <h1 class='site-title'>Ben Polinsky Web Design</h1>
     <%= link_to "benjamin.polinsky@gmail.com", "mailto:benjamin.polinsky@gmail.com", class: "email-me" %>

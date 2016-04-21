@@ -13,6 +13,6 @@ $(document).on('ready', function() {
 
 $(document).on('page:load', function() {
   $('.contact-form form').parsley().reset();
-  ready()
+  ready();
 });
 

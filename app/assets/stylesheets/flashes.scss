@@ -1,0 +1,37 @@
+.main-errors{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  background:$lightblue;
+  color:white;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  z-index:99;
+  font-size:12px;
+  line-height:12px;
+  font-weight:700;
+  padding:10px 0;
+}
+
+.main-errors{
+  text-align:center;
+  animation:
+     alert-notification 1s 1;
+     -webkit-animation:alert-notification 1s 1;
+     animation-fill-mode: forwards;
+
+     animation-delay:6s;
+     -webkit-animation-delay:6s; /* Safari and Chrome */
+     -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes alert-notification{
+    from {opacity :1; top:0px}
+    to {opacity :0; top:-1000px;}
+}
+
+@-webkit-keyframes alert-notification{
+    from {opacity :1; top:0px;}
+    to {opacity :0; top:-1000px;}
+}
