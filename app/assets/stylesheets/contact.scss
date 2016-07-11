@@ -4,7 +4,8 @@
 .modal-content{
   padding:10px;
 }
-.close-animatedModal{
+
+.modal .close{
   color:white;
   cursor:pointer;
   position:fixed;
@@ -15,8 +16,8 @@
     height:30px;    
     padding:10px;
   }
-
 }
+
 .contact-form{
   color:white;
   display: -webkit-flex;

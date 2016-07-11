@@ -1,17 +1,23 @@
 ready = function () {
-  $('#demo01').animatedModal({
-    color: '#154D65',
-    animationDuration: '.2s',
-    animatedIn: "fadeIn",
-    animatedOut: "fadeOut"
+  var contactModal = $('[data-remodal-id=modal]').remodal({
+    hashTracking: false,
+    closeOnOutsideClick: true
+  })
+  
+  $('a.modal-click').on('click', function(event) {
+    contactModal.open();
+    return false
   });
+  
+  $('.modal div.close').on('click', function(event) {
+    event.preventDefault();
+    contactModal.close();
+    
+  });
+  
 }
 
-$(document).on('ready', function() {
-  ready()
-});
-
-$(document).on('page:load', function() {
+$(document).on('turbolinks:load', function() {
   $('.contact-form form').parsley().reset();
   ready();
 });

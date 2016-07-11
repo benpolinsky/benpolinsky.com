@@ -17,6 +17,6 @@
 //= require tether
 //= require turbolinks
 //= require bootstrap
-//= require animatedModal.min.js
 //= require parsley
+//= require remodal.min
 //= require_tree .
