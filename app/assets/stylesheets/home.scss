@@ -51,8 +51,8 @@ a.projects-view-all{
 
 @media screen and (max-width: 680px) {
   .main-container{
-    width:100%;
-    margin:0;
+    width:380px;
+    margin:0 auto;
     text-align:center;
     overflow:hidden;
   }
@@ -62,13 +62,20 @@ a.projects-view-all{
   .recent-projects{
     clear:both;
     overflow:hidden;
-    margin-top:20px;
-
+    width:250px;
+    margin:20px auto 0 auto;
   }
 
   a.projects-view-all{
-    float:left;
+    float:none;
     clear:both;
+    text-align:center;
   }
 
+}
+
+@media screen and (max-width: 400px) {
+  .main-container{
+    width:100%;
+  }
 }
