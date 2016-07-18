@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160421215119) do
+ActiveRecord::Schema.define(version: 20160713150414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,80 @@ ActiveRecord::Schema.define(version: 20160421215119) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_admins_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "bp_custom_fields_abstract_resources", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bp_custom_fields_appearances", force: :cascade do |t|
+    t.string   "resource"
+    t.string   "resource_id"
+    t.boolean  "appears",           default: true
+    t.integer  "row_order"
+    t.integer  "group_template_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.index ["group_template_id"], name: "bpf_a_gt", using: :btree
+  end
+
+  create_table "bp_custom_fields_field_templates", force: :cascade do |t|
+    t.string   "name"
+    t.string   "label"
+    t.integer  "group_template_id"
+    t.integer  "field_type"
+    t.string   "min"
+    t.string   "max"
+    t.boolean  "required"
+    t.text     "instructions"
+    t.text     "default_value"
+    t.text     "placeholder_text"
+    t.string   "prepend"
+    t.string   "append"
+    t.integer  "rows"
+    t.string   "date_format"
+    t.string   "time_format"
+    t.string   "accepted_file_types"
+    t.string   "toolbar"
+    t.text     "choices"
+    t.boolean  "multiple"
+    t.integer  "parent_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "row_order"
+    t.index ["group_template_id"], name: "bpf_ft_gt", using: :btree
+  end
+
+  create_table "bp_custom_fields_fields", force: :cascade do |t|
+    t.integer  "field_template_id"
+    t.integer  "group_id"
+    t.text     "value"
+    t.string   "file"
+    t.integer  "parent_id"
+    t.boolean  "container"
+    t.integer  "row_order"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["field_template_id"], name: "bpf_f_ft", using: :btree
+    t.index ["group_id"], name: "bpf_f_g", using: :btree
+  end
+
+  create_table "bp_custom_fields_group_templates", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "visible"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bp_custom_fields_groups", force: :cascade do |t|
+    t.integer  "group_template_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "groupable_type"
+    t.integer  "groupable_id"
+    t.index ["group_template_id"], name: "bpf_fg_gt", using: :btree
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

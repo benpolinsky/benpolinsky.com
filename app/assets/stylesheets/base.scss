@@ -1,31 +1,57 @@
 $lightblue: #29ABE2;
 $darkblue: #154D65;
 
-  *{
-    font-family: "acumin-pro";
-    font-weight:200;
-  }
+*{
+  font-family: "acumin-pro";
+  font-weight:200;
+}
 
-  h1{
-    font-size:16px;
-    text-transform:lowercase;
-    margin:0 auto;
-  }
+h1{
+  font-size:16px;
+  text-transform:lowercase;
+  margin:0 auto;
+}
 
-  p{
-    font-size:12px;
-  }
+p{
+  font-size:12px;
+}
 
-  a, a:focus, a:active, a:visited{
-    color:$lightblue;
-    font-size:10px;
-  }  
-
-
+a, a:focus, a:active, a:visited{
+  color:$lightblue;
+  font-size:10px;
+}  
 
 .parsley-errors-list{
    padding:10px 0; 
 }
+
+.bdp-btn{
+  display: inline-block;
+  padding: 3px 3px 3px 5px;
+  border: 1px black solid;
+  border-radius: 2px;
+  color: black;
+  text-decoration: none;
+  background:white;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  &:visited{
+    color:black;
+  }
+  &:hover{
+    color:black;
+  }
+  &:active, &:focus{
+    color:black;
+  };
+}
+
+.bdp-btn span.icon{
+  position:relative;
+  top:-1px;
+}
+
 
 @media screen and (max-width: 680px) {
 
@@ -48,3 +74,4 @@ $darkblue: #154D65;
     font-size:10px;
   }  
 }
+

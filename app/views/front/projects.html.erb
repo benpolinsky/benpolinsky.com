@@ -3,8 +3,9 @@
     <span class='crumb-separator'>&raquo;</span>
     <%= link_to "Projects", front_projects_path, class: "crumb-link"%>
 </aside>
+<div class='main-container'>
+  <section class='front-projects-container'>
+    <%= render :partial => 'projects', locals: {projects: @projects} %>  
+  </section>
 
-<section class='front-projects-container'>
-  <%= render :partial => 'projects', locals: {projects: @projects} %>  
-</section>
-
+</div>

@@ -1,14 +1,24 @@
 ## README and TODOs:
-- replace modal with remodal.
-- Front Styles - near finished
-- Call to action - contact at top or top right or something
+- Mention familiarity with Big Cartel and Shopifyœ
+- I don't like the design... figure out something better.
+  - I do like the header. 
 - mobile version - roughly finished
 - final specs (contact mailer, couple model methods, smoketest)
+- resume, about abstract custom fields
+- flashes/notices
 
-- heroku deploy
-
+- hmm where to deploy...
+  - then fill out and launch
+  - business cards?
 
 - Add Gems / Plugins Section once you hook that up
-  - Timeselect
+  - Feedbag (on Philly Slick github)
   - Custom Fields
-  - Flashes
+  - Flashes tbd
+  - MeCommerce tbd
+  - slick-scroll (github/phillyslick)
+  - Etsy Importer (extract from mineraliety)
+  - Ebay Importer (extract from mineraliety)
+  - Guest Functionality (extract from mineraliety)
+
+  

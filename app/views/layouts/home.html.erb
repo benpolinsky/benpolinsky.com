@@ -19,18 +19,21 @@
   </div>
 <% end %>
     
-    <h1 class='site-title'>Ben Polinsky Web Design</h1>
-    <%= link_to "benjamin.polinsky@gmail.com", "mailto:benjamin.polinsky@gmail.com", class: "email-me" %>
-    
+    <h1 class='site-title'><%= link_to "Ben Polinsky Web Design", root_path %></h1>
+
     <div class='sub-title'>
-      <div>Ruby on Rails</div>
-      <div>Javascript</div>
-      <div>Wordpress</div>
-      <div>Adobe Creative Suite</div>
+      <%= active_link_to "Projects", front_projects_path %>
+      <%= active_link_to "Open Source", open_source_path %>
+      <%= active_link_to "About", about_path %>
+      <%= active_link_to "Contact", '#contact', active: false, class: "modal-click" %>
     </div>
+    
+    <%= link_to "benjamin.polinsky@gmail.com".html_safe, "mailto:benjamin.polinsky@gmail.com", class: "email-me bdp-btn" %>
+    
+
   </header>
   
-  <div class='main-container'>
+  <div>
     <%= yield %>  
   </div>
   

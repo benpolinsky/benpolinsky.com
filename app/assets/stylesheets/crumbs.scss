@@ -2,8 +2,9 @@ aside.crumbs{
   float:none;
   clear:both;
   overflow:hidden;
-  text-align:center;
-  width:auto;
+  text-align:left;
+  max-width:1200px;
+  margin:0 auto;
 }
 
 .crumb-link{

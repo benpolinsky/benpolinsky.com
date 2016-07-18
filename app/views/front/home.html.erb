@@ -1,17 +1,20 @@
-<article class='front'>
-  <p>
-    I love developing and desiging projects for the web.  
-    I’ve spent the last  six years making sites and learning new technologies.  
-    I take a modern, modular approach to code, and am thrilled with the current direction of the industry.
-  </p>  
+<div class='main-container'>
+  <article class='front'>
+    <p>
+      I love developing and desiging projects for the web.  
+      I’ve spent the last  six years making sites and learning new technologies.  
+      I take a modern, modular approach to code, and am thrilled with the current direction of the industry.
+      Ruby on Rails is my go to web technology, but I love Wordpress for quick sites and am eager to get into React more and more.
+    </p>  
   
-  <p>
-    Check out some of my recent projects and 
-    <%= link_to "drop me a line if you're intereted in working together.", '#', class: "modal-click" %>
-  </p>
-</article>
+    <p>
+      Check out some of my recent projects and 
+      <%= link_to "drop me a line if you're intereted in working together.", '#', class: "modal-click" %>
+    </p>
+  </article>
 
-<section class='recent-projects'>
-  <%= render :partial => 'projects', locals: {projects: @projects} %>
-  <%= link_to "View All", front_projects_path, class: "projects-view-all" %>
-</section>
+  <section class='recent-projects'>
+    <%= render :partial => 'projects', locals: {projects: @projects} %>
+    <%= link_to "View All <span class='icon'>&raquo;</span>".html_safe, front_projects_path, class: "projects-view-all bdp-btn" %>
+  </section>
+</div>

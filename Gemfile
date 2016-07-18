@@ -9,6 +9,7 @@ gem 'thin'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem "autoprefixer-rails"
 
 gem 'turbolinks'
 
@@ -36,6 +37,8 @@ gem 'figaro'
 gem 'rmagick'
 gem 'devise'
 
+gem 'bp_custom_fields', github: 'benpolinsky/bp_custom_fields' 
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,9 +47,4 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-end
 
