@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Benpolinskyweb</title>
+  <%= stylesheet_link_tag    'application', 'parsley', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="https://use.typekit.net/ttp0tmc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <%= favicon_link_tag 'favicon.png' %>
+</head>
+<body class="<%= body_class %> ">
+  <header class='front'>
+<% unless flash.empty? %>
+  <div class='main-errors'>
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "flash #{key}" %>
+    <% end %>
+  </div>
+<% end %>
+    
+    <h1 class='site-title'><%= link_to "Ben Polinsky Web Design", root_path %></h1>
+
+    <div class='sub-title'>
+      <%= active_link_to "Projects", front_projects_path %>
+      <%= active_link_to "Open Source", open_source_path %>
+      <%= active_link_to "About", about_path %>
+      <%= active_link_to "Contact", '#contact', active: false, class: "modal-click" %>
+    </div>
+    
+    <%= link_to "benjamin.polinsky@gmail.com".html_safe, "mailto:benjamin.polinsky@gmail.com", class: "email-me bdp-btn" %>
+    
+
+  </header>
+  
+  <div class='devise-content'>
+    <%= yield %>  
+  </div>
+  
+  <!--Call your modal-->
+
+     <%= render :partial => 'shared/quick_modal' %>
+
+  
+  <footer>
+    <div class='links-container'>
+      <% @links.each do |link| %>
+        <div class='footer-link'>
+          <%= link_to link.url do %>
+            <%= image_tag link.image.url %>
+            <%= content_tag :p, link.subtitle, class: "footer-link-subtitle" %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>    
+  </footer>  
+</body>
+</html>

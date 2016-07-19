@@ -14,6 +14,7 @@ Rails.application.routes.draw do
         post 'update_row_order'
       end
     end
+    root to: 'projects#index'
   end
   
   get 'home' => 'front#home', as: :home

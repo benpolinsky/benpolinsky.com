@@ -1,5 +1,4 @@
 class FrontController < ApplicationController
-  before_filter :grab_links
   layout 'home'
   def home
     @projects = Project.by_row_order.limit(4)
@@ -24,9 +23,4 @@ class FrontController < ApplicationController
     @project = Project.friendly.find(params[:id])
   end
   
-  protected
-  
-  def grab_links
-    @links = Link.by_row_order
-  end
 end
