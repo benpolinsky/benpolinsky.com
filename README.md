@@ -9,7 +9,6 @@
 - about custom fields
 - just link to a resume, maybe at the bottom of the screen?  Or at the top, I don't think it needs to be an interactive thingy for now.
 - custom field seeds + general solid seeds
-- flashes/notices
 
 - hmm where to deploy...
   - then fill out and launch

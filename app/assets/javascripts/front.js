@@ -1,24 +1,30 @@
 ready = function () {
-  var contactModal = $('[data-remodal-id=modal]').remodal({
-    hashTracking: false,
-    closeOnOutsideClick: true
-  })
+  if ($('.contact-form form').length > 0) {
+    $('.contact-form form').parsley().reset()    
+  }
   
-  $('a.modal-click').on('click', function(event) {
-    contactModal.open();
-    return false
-  });
+  if ($('[data-remodal-id=modal]').length > 0) {
+    var contactModal = $('[data-remodal-id=modal]').remodal({
+      hashTracking: false,
+      closeOnOutsideClick: true
+    })
   
-  $('.modal div.close').on('click', function(event) {
-    event.preventDefault();
-    contactModal.close();
+    $('a.modal-click').on('click', function(event) {
+      contactModal.open();
+      return false
+    });
+  
+    $('.modal div.close').on('click', function(event) {
+      event.preventDefault();
+      contactModal.close();
     
-  });
+    });    
+  }
+
   
 }
 
 $(document).on('turbolinks:load', function() {
-  $('.contact-form form').parsley().reset();
   ready();
 });
 
