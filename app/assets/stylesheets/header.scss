@@ -48,3 +48,15 @@ header .sub-title a{
     color:$lightblue;
   };
 }
+
+
+
+@media screen and (max-width: 680px) {
+  header a.email-me{
+    height:10px;
+    width:15px;
+    font-size:0px;
+    background:image-url('mail_2.png') no-repeat;
+    background-size:contain;
+  }
+}

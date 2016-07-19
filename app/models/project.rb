@@ -6,6 +6,7 @@ class Project < ApplicationRecord
   friendly_id :name, use: :slugged
   
   validates_presence_of :name, :description, :client, :site_url
+  validates_uniqueness_of :name
   mount_uploader :image, ImageUploader
 
   def self.by_row_order
