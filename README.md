@@ -1,6 +1,6 @@
 ## README and TODOs:
+- free ssl check it out
 - Mention familiarity with Big Cartel and Shopify
-- design is okay?  Not sure about the front...
   - I do like the header. 
 
 - mobile version - roughly finished
