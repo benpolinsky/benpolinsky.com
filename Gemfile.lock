@@ -421,6 +421,7 @@ DEPENDENCIES
   jquery-ui-rails
   parsley-rails
   pg (~> 0.15)
+  puma
   rails (= 5.0.0)
   rails-assets-tether (>= 1.1.0)!
   ranked-model
