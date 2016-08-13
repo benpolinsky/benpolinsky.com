@@ -13,7 +13,7 @@
 
     <%= f.text_field :public_repo %>
 
-    <%= f.datetime_select :creation_date %>
+    <%= f.datetime_select :creation_date, start_year: 2010, end_year: Time.zone.now.year %>
 
     <%= f.submit %>
 <% end %>
