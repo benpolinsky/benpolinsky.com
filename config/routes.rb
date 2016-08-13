@@ -14,6 +14,9 @@ Rails.application.routes.draw do
         post 'update_row_order'
       end
     end
+    
+    resources :admins
+    
     root to: 'projects#index'
   end
   

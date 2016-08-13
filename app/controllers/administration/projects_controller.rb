@@ -1,5 +1,4 @@
-class Administration::ProjectsController < ApplicationController
-  before_action :authenticate_admin!
+class Administration::ProjectsController < AdministrationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
