@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Benpolinskyweb</title>
+  <title>Ben Polinsky - Philadelphia Web Design and Development</title>
   <%= stylesheet_link_tag    'application', 'parsley', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -19,11 +19,11 @@
       </div>
     <% end %>
     
-    <h1 class='site-title'><%= link_to "Ben Polinsky Web Design", root_path %></h1>
+    <h1 class='site-title'><%= link_to "Ben Polinsky Web Development", root_path %></h1>
 
     <div class='sub-title'>
       <%= active_link_to "Projects", front_projects_path %>
-      <%= active_link_to "About", about_path %>
+      <%# active_link_to "About", about_path %>
       <%= active_link_to "Contact", '#contact', active: false, class: "modal-click" %>
     </div>
     
