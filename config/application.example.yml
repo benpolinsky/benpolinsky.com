@@ -1,2 +1,10 @@
-aws_access_key_id
-aws_secret_access_key
+production:
+  aws_region: 
+  s3_bucket_name:
+  aws_access_key:
+  aws_access_secret:
+  mailgun_username:
+  mailgun_password:
+  mailgun_domain:
+  carrierwave_upload_method:
+  secret_key_base:

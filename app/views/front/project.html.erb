@@ -8,6 +8,7 @@
 <div class='main-container'>
   <section class='project'>
     <%= content_tag :h1, @project.name, class: "project-title" %>
+    <%= link_to @project.site_url, @project.site_url %>
   
     <div class='project-image-container'>
       <%= image_tag @project.image %>

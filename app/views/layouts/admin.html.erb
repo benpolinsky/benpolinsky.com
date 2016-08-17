@@ -22,8 +22,8 @@
   <nav class='navbar bg-inverse navbar-dark main'>
     <div class='nav navbar-nav'>
      
-      <%= active_link_to "Links", main_app.administration_links_path, class: "nav-item nav-link" %>
       <%= active_link_to "Projects", main_app.administration_projects_path, class: "nav-item nav-link" %>
+      <%= active_link_to "Links", main_app.administration_links_path, class: "nav-item nav-link" %>
       <%= abstract_resource_admin_nav %>
       <%= active_link_to "Custom Fields", bp_custom_fields.root_path, class: "nav-item nav-link" %>
       <%= link_to "Sign Out", main_app.destroy_admin_session_path, method: :delete, class: "nav-item nav-link" %>
