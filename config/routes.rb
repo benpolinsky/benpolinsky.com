@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :admins  
   mount BpCustomFields::Engine => "administration/custom_fields", as: "bp_custom_fields"
+  
   namespace :administration do
     resources :links do
       collection do
@@ -22,11 +23,11 @@ Rails.application.routes.draw do
   
   get 'home' => 'front#home', as: :home
   get 'about' => 'front#about', as: :about
-  get 'open_source' => 'front#open_source', as: :open_source
-  get 'open_source' => 'front#open_source', as: :resume
+
   get 'projects' => 'front#projects', as: :front_projects
   get 'project/:id' => 'front#project', as: :front_project
   post 'contact' => 'front#contact', as: :contact
+  
   root to: 'front#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
