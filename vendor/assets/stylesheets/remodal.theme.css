@@ -87,7 +87,7 @@
 
 .remodal,
 .remodal-wrapper:after {
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 /* Close button */
