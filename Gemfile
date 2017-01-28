@@ -38,7 +38,7 @@ gem 'rmagick'
 gem 'devise'
 
 gem 'bp_custom_fields', github: 'benpolinsky/bp_custom_fields' 
-
+gem 'error_list_for' 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

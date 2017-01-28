@@ -27,14 +27,10 @@ class Administration::LinksController < AdministrationController
   def create
     @link = Link.new(link_params)
 
-    respond_to do |format|
-      if @link.save
-        format.html { redirect_to [:administration, @link], notice: 'Link was successfully created.' }
-        format.json { render :show, status: :created, location: [:administration, @link] }
-      else
-        format.html { render :new }
-        format.json { render json: @link.errors, status: :unprocessable_entity }
-      end
+    if @link.save
+      redirect_to [:administration, @link], notice: 'Link was successfully created.'
+    else
+      render :new, notice: error_list_for(@link)
     end
   end
 

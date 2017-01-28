@@ -110,6 +110,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    error_list_for (0.1.2)
     erubis (2.7.0)
     eventmachine (1.2.0.1)
     excon (0.51.0)
@@ -411,6 +412,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.1.0)
   devise
+  error_list_for
   factory_girl_rails (~> 4.0)
   figaro
   flutie
