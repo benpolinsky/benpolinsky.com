@@ -5,7 +5,7 @@ class Administration::LinksController < AdministrationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.all
+    @links = Link.by_row_order
   end
 
   # GET /links/1

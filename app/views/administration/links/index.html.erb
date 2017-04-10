@@ -15,7 +15,7 @@
 
   <tbody>
     <% @links.each do |link| %>
-    <%= content_tag :tr, class: "item", data: {item_id: link.id, post_path: url_for([:update_row_order, :administration, :projects])} do %>
+    <%= content_tag :tr, class: "item", data: {item_id: link.id, post_path: url_for([:update_row_order, :administration, :links])} do %>
         <td><%= link.name %></td>
         <td><%= link.url %></td>
         <td><%= image_tag link.image.url(:thumb) %></td>
