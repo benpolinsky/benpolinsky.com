@@ -11,7 +11,7 @@ GIT
       ranked-model
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   remote: https://rails-assets.org/
   specs:
     CFPropertyList (2.3.2)
