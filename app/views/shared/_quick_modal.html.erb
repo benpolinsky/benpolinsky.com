@@ -9,11 +9,16 @@
       <div class='contact-form'>
         <%= form_tag "contact", data: {parsley_validate: true} do |f| %>
           <h1>Hello!  How Can I Help?</h1>
+          <span class='hpot'>
+          <%= label_tag :name, "Name" %>
+          <%= text_field_tag :name %>
+          </span>
           <%= label_tag :email, "Email Address:" %>
           <%= email_field_tag :email, '', data: {parsley_required: true, parsley_email: true, parsley_required_message: "Please enter a valid email address!"} %>
           <%= label_tag :message, "Your Message:" %>
           <%= text_area_tag :message, '', data: {parsley_required: true, parsley_required_message: "What, no message?"} %>
           <%= button_tag "Contact" %>
+          
         <% end %>
       </div>
     </div>

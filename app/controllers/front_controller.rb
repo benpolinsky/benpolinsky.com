@@ -5,9 +5,11 @@ class FrontController < ApplicationController
   end
   
   def contact
-    message = params[:message]
-    sender = params[:email]
-    ContactMailer.hello(sender, message).deliver_now
+    unless params[:name].present?
+      message = params[:message]
+      sender = params[:email]
+      ContactMailer.hello(sender, message).deliver_now if message && sender
+    end
     redirect_to root_path, notice: "Thanks!"
   end
   
