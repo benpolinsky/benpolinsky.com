@@ -2,14 +2,19 @@ $lightblue: #29ABE2;
 $darkblue: #154D65;
 
 *{
-  font-family: "acumin-pro";
+//  font-family: "acumin-pro";
   font-weight:200;
+}
+
+body{
+  margin:0;
 }
 
 h1{
   font-size:16px;
   text-transform:lowercase;
   margin:0 auto;
+  font-family: "acier-bat-noir";
 }
 
 p{
@@ -73,4 +78,5 @@ a, a:focus, a:active, a:visited{
     font-size:10px;
   }  
 }
+
 

@@ -45,6 +45,7 @@ group :development, :test do
   gem 'byebug'
   gem "factory_girl_rails", "~> 4.0"
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do

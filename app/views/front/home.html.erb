@@ -1,19 +1,17 @@
-<div class='main-container'>
-  <article class='front'>
-    <p>
-      I love developing and desiging projects for the web.  
-      I take a modern, modular approach to code, and am thrilled with the current direction of the industry.
-      Ruby on Rails, React.js, and Wordpress are currently what I reach for when building sites, but I'm constantly checking out new libraries and frameworks to see what they offer.
-    </p>  
-  
-    <p>
-      Check out some of my recent projects and 
-      <%= link_to "drop me a line if you're intereted in working together.", '#', class: "modal-click" %>
-    </p>
-  </article>
+<article class='front'>
+  <p>
+    I love developing and desiging projects for the web.  
+    I take a modern, modular approach to code, and am thrilled with the current direction of the industry.
+    Ruby on Rails, React.js, and Wordpress are currently what I reach for when building sites, but I'm constantly checking out new libraries and frameworks to see what they offer.
+  </p>  
 
-  <section class='recent-projects'>
-    <%= render :partial => 'projects', locals: {projects: @projects} %>
-    <%= link_to "View All <span class='icon'>&raquo;</span>".html_safe, front_projects_path, class: "projects-view-all bdp-btn" %>
-  </section>
-</div>
+  <p>
+    Check out some of my recent projects and 
+    <%= link_to "drop me a line if you're intereted in working together.", '#', class: "modal-click" %>
+  </p>
+</article>
+
+<section class='recent-projects'>
+  <%= render :partial => 'projects', locals: {projects: @projects} %>
+  <%= link_to "View All <span class='icon'>&raquo;</span>".html_safe, front_projects_path, class: "projects-view-all bdp-btn" %>
+</section>
