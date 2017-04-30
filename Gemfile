@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '5.0.0'
+gem 'rails', '~> 5.1'
 gem 'pg', '~> 0.15'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
 gem 'thin'
 
 gem 'jquery-rails'
@@ -31,21 +31,23 @@ gem 'ranked-model'
 
 gem 'carrierwave'
 gem "fog"
-
-gem 'friendly_id', '~> 5.1.0'
+gem 'xmlrpc', '0.3.0'
+gem 'friendly_id'
 gem 'figaro'
 gem 'rmagick'
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise', branch: "master"
 
-gem 'bp_custom_fields', github: 'benpolinsky/bp_custom_fields' 
+
+gem 'bp_custom_fields', github: 'benpolinsky/bp_custom_fields'
 gem 'error_list_for' 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem "factory_girl_rails", "~> 4.0"
+  gem "factory_girl_rails"
   gem 'rspec-rails'
   gem 'rails-controller-testing'
+  gem 'listen'
 end
 
 group :development do

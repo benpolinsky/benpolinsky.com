@@ -18,7 +18,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => 'public, max-age=172800'
+      'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -47,23 +47,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  ActionMailer::Base.delivery_method = :smtp
 
-  # Mailgun
-  # ActionMailer::Base.smtp_settings = {
-  #   :port           => 587,
-  #   :address        => 'smtp.mailgun.org',
-  #   :user_name      => ENV["mailgun_username"],
-  #   :password       => ENV["mailgun_password"],
-  #   :domain         => ENV["mailgun_domain"],
-  #   :authentication => :plain,
-  # }
-
-  config.action_mailer.asset_host = "localhost:3000"
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
-# mailcatcher  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
-  # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
