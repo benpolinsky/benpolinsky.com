@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '~> 5.1'
+gem 'webpacker', github: 'rails/webpacker'
 gem 'pg', '~> 0.15'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
