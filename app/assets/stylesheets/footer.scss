@@ -18,7 +18,7 @@ a.footer-contact-link{
 }
 
 .footer-link{
-  margin: 10px 0;
+  margin: 10px;
 }
 .footer-link a{
   max-width:100%;
@@ -34,8 +34,19 @@ a.footer-contact-link{
   font-family:'acier-bat-solid';
 }
 
-
-
 .links-container{
-  text-align:center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media screen and (min-width: 620px){
+  .footer-link{
+      width:200px;
+  }
+  
+
 }

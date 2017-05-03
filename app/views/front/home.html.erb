@@ -1,37 +1,16 @@
 
   <section id='projects' class='front-feature'>
     <h1>Projects</h1>    
-
-    <article id='art-vs-art' class='bp-feature'>
-      <header>
-        <h2>Art vs Art</h2>
-        <a class='project-link' href='http://artvsart.io'>artvsart.io</a>      
-      </header>
-        <p>
-          The idea is simple: pick between two pieces of art
-          Not just a painting versus painting, but any 'work of art' 
-          against any other. Finally: The Little Prince vs. Pulp Fiction.
-          At last: The Simpsons vs. War & Peace.  You get the idea.
-        </p>
-        <p>
-          Art vs. Art's API is built using Ruby on Rails with a front-end developed in React.  A mobile version is planned using React Native.
-        </p>
-    </article>
-    
-    <article id='mineraliety' class='bp-feature'>
-      <header>
-        <h2>Mineraliety</h2>
-        <a class='project-link' href='https://mineraliety.com'>mineraliety.com</a>      
-      </header>
-
-      <p>
-        Mineraliety was an Etsy-type marketplace for mineral enthuiasts.  Unfortunately, it closed down in April of 2017.
-      </p>
-
-      <p>
-        Mineraliety was a large Ruby on Rails application with many facets to it.  Read more about the technology used and the lessons I learned <%= link_to 'here', 'here' %>.
-      </p>
-    </article>
+    <% @projects.each do |project| %>
+      <%= content_tag :article, id: project.name.parameterize, class: 'bp-feature' do %>
+          <%= content_tag :header do %>
+            <%= content_tag :h2, project.name %>
+          <% end %>
+          <%= link_to project.short_url, project.site_url, class: 'project-link', target: "new" %>
+          <%= sanitize project.front_description, tags: ['p'] %>
+          <%= link_to "Read More", front_project_path(project), class: 'project-index-link' %>
+      <% end %>
+    <% end %>
 
     <%= link_to "View All Projects + Sites", front_projects_path, class: "projects-view-all bdp-btn" %>    
   </section>

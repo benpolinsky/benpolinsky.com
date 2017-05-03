@@ -1,6 +1,6 @@
 <% projects.each do |project| %>
   <%= link_to front_project_path(project), class: 'project-index-link' do %>
-    <%= image_tag project.image.url(:thumb), class: 'project-index-link-image' %>
+    <%= image_tag project.image.url, class: 'project-index-link-image' %>
     <%= content_tag :p, project.name, class: 'project-link-name' %>
   <% end %>
 <% end %>

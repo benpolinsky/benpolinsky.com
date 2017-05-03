@@ -7,7 +7,10 @@ class ApplicationController < ActionController::Base
   def error_list_for(model)
     model.errors.full_messages.join(", ")
   end
-    
+  
+  def after_sign_in_path_for(resource)
+     administration_root_path || root_path
+   end
   protected
   
   def grab_links

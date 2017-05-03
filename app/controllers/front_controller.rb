@@ -1,7 +1,7 @@
 class FrontController < ApplicationController
   layout 'home'
   def home
-    @projects = Project.by_row_order.limit(4)
+    @projects = Project.by_row_order.front
   end
   
   def contact

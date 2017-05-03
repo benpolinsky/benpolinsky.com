@@ -12,6 +12,9 @@
     <%= f.file_field :image %>
 
     <%= f.text_field :public_repo %>
+    
+    <%= f.check_box :show_on_front %>
+    <%= f.text_area :front_description %>
 
     <%= f.datetime_select :creation_date, start_year: 2010, end_year: Time.zone.now.year %>
 

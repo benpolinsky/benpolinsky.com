@@ -29,10 +29,11 @@ section.project{
 }
 
 .project-index-link-image{
-  max-width:100%;
+  max-width:130px;
   top:50%;
   transform:translateY(-50%);
   position:relative;
+
 }
 
 .project-link-name{
@@ -45,8 +46,32 @@ section.project{
 
 .project-image-container{
   margin: 20px auto;
+  img{
+    max-width:100%;
+  }
 }
 
 section.project .description{
     margin:10px auto;
+}
+
+@media screen and (min-width: 620px){
+  .front-projects-container{
+    max-width: 1200px;
+  }
+  .project-index-link {
+      width: 25%;
+      height: 200px;
+      position: relative;
+  }
+}
+
+@media screen and (min-width: 1050px){
+  .project-index-link{
+    height:300px;
+  }
+  
+  .project-index-link-image{
+    max-width:200px;
+  }
 }

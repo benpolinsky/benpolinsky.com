@@ -33,5 +33,15 @@
   <%= @project.creation_date %>
 </p>
 
+<p>
+  <strong>Show on Front?:</strong>
+  <%= @project.show_on_front ? "YES" : "NO" %>
+</p>
+
+<p>
+  <strong>Front Description:</strong>
+  <%= @project.front_description %>
+</p>
+
 <%= link_to 'Edit', edit_administration_project_path(@project) %> |
 <%= link_to 'Back', administration_projects_path %>
