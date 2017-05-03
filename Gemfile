@@ -57,7 +57,9 @@ group :development do
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm',     require: false
   gem 'capistrano3-puma',   require: false
+  gem 'capistrano-maintenance', '~> 1.0', require: false
   gem 'capistrano-ssh-doctor', '~> 1.0'
+  
 end
 
 group :production do

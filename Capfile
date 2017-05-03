@@ -9,7 +9,10 @@ require 'capistrano/rails'
 require 'capistrano/bundler'
 require 'capistrano/rvm'
 require 'capistrano/puma'
+require "capistrano/scm/git"
 
+install_plugin Capistrano::SCM::Git
+install_plugin Capistrano::Puma
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*").each { |r| import r }

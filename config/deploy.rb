@@ -1,7 +1,6 @@
 # config valid only for current version of Capistrano
-lock '3.6.0'
+lock '3.8.1'
 
-# Change these
 server '162.243.85.56', port: 49311, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:benpolinsky/benpolinsky.com.git'
@@ -9,7 +8,7 @@ set :application,     'benpolinskyweb'
 set :user,            'ben'
 # Don't change these unless you know what you're doing
 set :pty,             true
-set :rvm_ruby_version, '2.3.1'
+set :rvm_ruby_version, '2.4.0'
 set :use_sudo,        false
 set :stage,           :production
 set :deploy_via,      :remote_cache
