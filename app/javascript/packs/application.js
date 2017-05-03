@@ -11,9 +11,5 @@ require('viewport-units-buggyfill').init();
 
 // I still need to learn how to properly package my packages (this isn't the css file, just the js)
 // and it isn't minified (which I don't think you want to do, in this case)
-import {BpLiveColor} from 'bp-live-color'
 
-$(document).ready(function () {
-  // new BpLiveColor(['header', 'div']);
-})
 
