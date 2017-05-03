@@ -39,7 +39,7 @@ gem 'rmagick'
 gem 'devise', github: 'plataformatec/devise', branch: "master"
 
 
-gem 'bp_custom_fields', github: 'benpolinsky/bp_custom_fields'
+# gem 'bp_custom_fields', github: 'benpolinsky/bp_custom_fields'
 gem 'error_list_for' 
 
 group :development, :test do

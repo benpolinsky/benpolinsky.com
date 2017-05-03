@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :admins  
-  mount BpCustomFields::Engine => "administration/custom_fields", as: "bp_custom_fields"
+  # mount BpCustomFields::Engine => "administration/custom_fields", as: "bp_custom_fields"
   
   namespace :administration do
     resources :links do

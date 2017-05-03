@@ -19,5 +19,4 @@
 //= require bootstrap
 //= require parsley
 //= require remodal.min
-//= require bp_custom_fields
 //= require_tree .

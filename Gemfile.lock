@@ -1,16 +1,4 @@
 GIT
-  remote: git://github.com/benpolinsky/bp_custom_fields.git
-  revision: cc135ef27fff3dab6f6a6e3f6bd4166fffe17bdf
-  specs:
-    bp_custom_fields (0.1.2)
-      carrierwave
-      cocoon
-      jquery-rails
-      mini_magick
-      rails (>= 4.2.6)
-      ranked-model
-
-GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 83213569dd77551bb5cac493e2767457970905bc
   branch: master
@@ -116,7 +104,6 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
-    cocoon (1.2.9)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -310,7 +297,6 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_magick (4.7.0)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
@@ -442,7 +428,6 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap (~> 4.0.0.alpha3)
   bootstrap_form
-  bp_custom_fields!
   byebug
   capistrano
   capistrano-bundler
