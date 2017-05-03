@@ -26,6 +26,7 @@
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.4.5",
+    "bp-live-color": "../bp-live-color/dist"
   }
 }

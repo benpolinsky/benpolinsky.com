@@ -35,25 +35,29 @@
 
   </header>
   
-  <div class='main-container'>
+  <main role='main' class='front'>
     <%= yield %>  
-  </div>
+  </main>
+  
   
 
   <%= render :partial => 'shared/quick_modal' %>
 
-  
-  <!-- <footer>
-    <div class='links-container'>
-      <# @links.each do |link| %>
-        <div class='footer-link'>
-          <%# link_to link.url do %>
-            <%# image_tag link.image.url %>
-            <%# content_tag :p, link.subtitle, class: "footer-link-subtitle" %>
-          <%# end %>
-        </div>
-      <%# end %>
+  <footer class='main'>
+    <div class='footer-container'>
+      <%= link_to "Drop me a line if you're intereted in working together.", '#', class: "modal-click footer-contact-link" %>      
+      <div class='links-container'>
+        <% @links.each do |link| %>
+          <div class='footer-link'>
+            <%= link_to link.url do %>
+              <%= image_tag link.image.url %>
+              <%= content_tag :p, link.subtitle, class: "footer-link-subtitle" %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </footer>   -->
+  </footer>
+
 </body>
 </html>
