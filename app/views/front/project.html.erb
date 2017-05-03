@@ -15,7 +15,7 @@
     </div>
   
     <div class='description'>
-      <%= @project.description %>
+      <%= sanitize @project.description, tags: ['p'] %>
     </div>
   </section>  
 </div>
