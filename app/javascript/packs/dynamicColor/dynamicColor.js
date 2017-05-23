@@ -25,13 +25,14 @@ export class DynamicColor {
       scheme = 'night';
     } else if (hourOfDay > 16) {
       scheme = 'evening';    
-    } else if (hourOfDay > 12) {
+    } else if (hourOfDay > 11) {
       scheme = 'afternoon';    
-    } else if (hourOfDay > 5) {
+    } else if (hourOfDay > 4) {
       scheme = 'morning';    
     } else {
       scheme = 'nightOwl';
     }
+    console.log(scheme)
     return scheme;
   }
   
