@@ -5,6 +5,7 @@
     <span class='crumb-separator'>&raquo;</span>
     <%= link_to @project.name.capitalize, front_project_path(@project), class: "crumb-link"%>
 </aside>
+
 <div class='main-container'>
   <section class='project'>
     <%= content_tag :h1, @project.name, class: "project-title" %>

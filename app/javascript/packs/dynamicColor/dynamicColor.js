@@ -35,23 +35,44 @@ export class DynamicColor {
     return scheme;
   }
   
+  // Fair amount of repetition
+  // I'll find the abstraction a bit later
+  // but it most likely has to do with primary/secondary/tertiary
+  
   static changeScheme(schemes){
-    console.log('shoudl be changing');
+    const HEADING_SELECTORS = 'h1, h1 > a, h2, h2 > a';
+    const COPY_SELECTORS = 'p, div.description';
+    const BLACKLIST_LINK_SELECTORS = '.bdp-btn, h1.site-title > a';
+    
     let dcPrimarySection = $('[data-dynamic-color="primary"]');
     let dcSecondarySection = $('[data-dynamic-color="secondary"]');
     let dcTertiarySection = $('[data-dynamic-color="tertiary"]');
-
-    for (let scheme in schemes) {
-      schemes[scheme]['background'] = ("rgba(" + schemes[scheme]['background'].join(", ") + ")");
-    }
-    console.log(schemes);
+    
+    let dcPrimaryHeading = dcPrimarySection.find(HEADING_SELECTORS);
+    let dcSecondaryHeading = dcSecondarySection.find(HEADING_SELECTORS);
+    let dcTertiaryHeading = dcTertiarySection.find(HEADING_SELECTORS);
+    
+    let dcPrimaryCopy = dcPrimarySection.find(COPY_SELECTORS);
+    let dcSecondaryCopy = dcSecondarySection.find(COPY_SELECTORS);
+    let dcTertiaryCopy = dcTertiarySection.find(COPY_SELECTORS);
+    
+    let dcPrimaryLinks = dcPrimarySection.find('a').not(BLACKLIST_LINK_SELECTORS);
+    let dcSecondaryLinks = dcSecondarySection.find('a').not(BLACKLIST_LINK_SELECTORS);
+    let dcTertiaryLinks = dcTertiarySection.find('a').not(BLACKLIST_LINK_SELECTORS);
+    
     dcPrimarySection.css('backgroundColor', schemes['primary']['background']);
+    dcPrimaryHeading.css('color', schemes['primary']['heading']);
+    dcPrimaryCopy.css('color', schemes['primary']['copy']);
+    dcPrimaryLinks.css('color', schemes['primary']['link']);
+    
     dcSecondarySection.css('backgroundColor', schemes['secondary']['background']);
+    dcSecondaryHeading.css('color', schemes['secondary']['heading']);
+    dcSecondaryCopy.css('color', schemes['secondary']['copy']);
+    dcSecondaryLinks.css('color', schemes['secondary']['link']);
+           
     dcTertiarySection.css('backgroundColor', schemes['tertiary']['background']);
+    dcTertiaryHeading.css('color', schemes['tertiary']['heading']);
+    dcTertiaryCopy.css('color', schemes['tertiary']['copy']);
+    dcTertiaryLinks.css('color', schemes['tertiary']['link']);
   }
-}
-
-function hexToRGBA(hexString) {
-  
-  return []
 }
