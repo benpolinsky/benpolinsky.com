@@ -12,24 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="<%= body_class %> ">
-  <header class='front'>
-    <%# unless flash.empty? %>
-      <!-- <div class='main-errors'>
-        <%# flash.each do |key, value| %>
-          <%# content_tag :div, value, class: "flash #{key}" %>
-        <%# end %>
-      </div> -->
-    <%# end %>
-    
-    <h1 class='site-title'><%= link_to "Ben Polinsky Web Design", root_path %></h1>
-    <div class='header-quick-links'>
-      <%= link_to "resume", "/ben_polinsky_resume_april_2017.pdf", target: 'new', class: "email-me bdp-btn" %>
-      <%= link_to "Email", "mailto:benjamin.polinsky@gmail.com", class: "email-me bdp-btn" %>      
-    </div>
-
-    
-
-  </header>
+ <%= render 'header' %>
   
   <main role='main' class='front'>
     <%= yield %>  

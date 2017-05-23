@@ -8,7 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 require('viewport-units-buggyfill').init();
-
+require('./initializeDynamicColor.js');
 // I still need to learn how to properly package my packages (this isn't the css file, just the js)
 // and it isn't minified (which I don't think you want to do, in this case)
 

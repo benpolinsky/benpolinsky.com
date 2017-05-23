@@ -5,7 +5,7 @@ header.front{
   margin:0 auto;
   box-sizing: border-box;
   padding-bottom:20px;
-  background: #FF413B;
+  background: rgba(255, 65, 59, 1);
   position:relative;
   h1.site-title a{
     font-size:24px;
@@ -57,8 +57,11 @@ body header.front h1.site-title a{
   top:5px;  
   right:5px;
 }
-a.bdp-btn{
-  
+
+.change-scheme{
+  position:absolute;
+  left:5px;
+  top:5px;
 }
 
 @media all and (max-width: 736px) and (orientation: landscape){

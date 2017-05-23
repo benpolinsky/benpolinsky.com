@@ -7,8 +7,13 @@ $darkblue: #154D65;
   box-sizing: border-box;
 }
 
+html{
+  position:relative;
+  min-height:100%;
+}
+
 body{
-  margin:0;
+  margin:0 0 15vh;
 }
 
 h1{
