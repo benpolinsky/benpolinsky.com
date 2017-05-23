@@ -9,5 +9,5 @@
     <%= link_to "resume", @resume_path, target: 'new', class: "email-me bdp-btn" %>
     <%= link_to "Email", "mailto:benjamin.polinsky@gmail.com", class: "email-me bdp-btn" %>      
   </div>
-  <%= select_tag "change_scheme", options_for_select(["default", "morning", "night", "afternoon", "nightOwl"]), {class: "change-scheme"} %>
+  <%= select_tag "change_scheme", themes_for_select, {class: "change-scheme"} %>
 </header>

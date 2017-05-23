@@ -32,7 +32,6 @@ export class DynamicColor {
     } else {
       scheme = 'nightOwl';
     }
-    console.log(scheme)
     return scheme;
   }
   

@@ -24,7 +24,7 @@ export default {
 
   nightOwl: {
     primary: {
-      background: [59, 28, 48, 1],
+      background: [0, 0, 0, 1],
       heading:  [151, 149, 152, 1],
       copy: [0, 0, 0, 1],
       link: []
@@ -70,7 +70,7 @@ export default {
 
   evening: {
     primary: {
-      background: [38, 9, 39, 1],
+      background: [38, 9, 39, 0.03],
       heading:  [151, 149, 152, 1],
       copy: [0, 0, 0, 1],
       link: []
@@ -79,12 +79,12 @@ export default {
     secondary: {
       background: [72, 24, 62, 1],
       heading:  [151, 149, 152, 1],
-      copy: [0, 0, 0, 1],
-      link: []
+      copy: [255, 255, 255, 1],
+      link: [216, 17, 69, 0.5]
     },
     
     tertiary: {
-      background: [123, 160, 168, 1],
+      background: [216, 17, 69, 0.29],
       heading:  [151, 149, 152, 1],
       copy: [0, 0, 0, 1],
       link: []
