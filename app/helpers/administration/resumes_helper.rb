@@ -1,0 +1,2 @@
+module Administration::ResumesHelper
+end

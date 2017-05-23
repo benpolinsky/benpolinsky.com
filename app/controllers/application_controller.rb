@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :grab_links
+  before_action :grab_links, :resume_path
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -15,6 +15,15 @@ class ApplicationController < ActionController::Base
   
   def grab_links
     @links = Link.by_row_order
+  end
+  
+  def resume_path
+    resume = Resume.published.first 
+    @resume_path = if resume && Resume.published.first.document.url.present?
+      resume.document.url 
+    else
+      "/ben_polinsky_resume_april_2017.pdf"
+    end
   end
   
 

@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<p>URL:  <%= link_to @resume.document.url, @resume.document.url %></p>
+<p>Published? <%= content_tag :span, @resume.published? %></p>
+
+<%= link_to 'Edit', edit_administration_resume_path(@resume) %> |
+<%= link_to 'Back', administration_resumes_path %>
