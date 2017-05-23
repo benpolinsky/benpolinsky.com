@@ -70,3 +70,11 @@ a, a:focus, a:active, a:visited{
   top:-1px;
 }
 
+
+
+// https://stackoverflow.com/a/16255670/791026
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+select:focus, textarea:focus, input:focus {
+        font-size: 16px;
+    }
+}
